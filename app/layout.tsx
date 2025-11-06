@@ -33,14 +33,16 @@ export default function RootLayout({
         <div className="flex flex-row items-center w-full min-h-screen space-between">
           <div className="w-1/5 min-w-64 h-[90vh] mr-10">
             <main className="relative w-full h-full p-4 overflow-hidden text-center bg-neutral-600 rounded-r-2xl">
-              <div className="flex items-center w-full">
-                <Image
-                  src="/its-me.png"
-                  alt="Its Me Image"
-                  width={400}
-                  height={400}
-                  className="object-cover object-center m-8 text-center border-2 rounded-xl border-neutral-300/10"
-                />
+              <div className="flex items-center justify-center w-full">
+                <div className="relative w-[200px] h-[270px]">
+                  <Image
+                    src="/face.png"
+                    alt="Its Me Image"
+                    fill
+                    sizes="400px"
+                    className="object-cover rounded-xl border-2 border-neutral-300/10"
+                  />
+                </div>
               </div>
               <div>
                 <h1 className="text-2xl font-bold">Rafał Curzydło</h1>
