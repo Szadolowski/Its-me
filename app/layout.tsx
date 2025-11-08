@@ -49,6 +49,11 @@ export default function RootLayout({
                 <h2 className="text-lg font-medium">FrontEnd Developer</h2>
               </div>
               <div className="w-[90%] text-left p-5">
+                <h3 className="text-xs font-light text-center">
+                  Jestem Frontend Developerem, który projektuje. Skupiam się na
+                  UX/UI i innowacjach, budując responsywne strony i aplikacje,
+                  które zachwycają i działają płynnie.
+                </h3>
                 <p className="mt-2 font-medium">
                   Age: <span>21</span>
                 </p>
