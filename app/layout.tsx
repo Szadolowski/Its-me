@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 // @ts-ignore: side-effect CSS import for global styles (Next.js)
 import "./globals.css";
+import NavInformation from "@/components/NavInformation";
 
 import Image from "next/image";
 
@@ -10,9 +11,11 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const geistMono = Geist({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  style: "normal",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -48,12 +51,13 @@ export default function RootLayout({
                 <h1 className="text-2xl font-bold">Rafał Curzydło</h1>
                 <h2 className="text-lg font-medium">FrontEnd Developer</h2>
               </div>
-              <div className="w-[90%] text-left p-5">
-                <h3 className="text-xs font-light text-center">
-                  Jestem Frontend Developerem, który projektuje. Skupiam się na
-                  UX/UI i innowacjach, budując responsywne strony i aplikacje,
-                  które zachwycają i działają płynnie.
-                </h3>
+              <div className="w-[90%] text-left p-5 flex flex-col h-full">
+                <div className={`${geistSans.variable} font-sans`}>
+                  <NavInformation img={"/github.png"}>GitHub</NavInformation>
+                  <NavInformation img={"/linkedin.png"}>
+                    LinkedIn
+                  </NavInformation>
+                </div>
                 <p className="mt-2 font-medium">
                   Age: <span>21</span>
                 </p>
