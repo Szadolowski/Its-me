@@ -10,7 +10,7 @@ export default function NavInformation({
 }) {
   return (
     <Link href={"https://github.com/Szadolowski"} target="_blank">
-      <div className="border-2 border-neutral-700 bg-neutral-500 overflow-hidden space-x-5 flex flex-row  rounded-lg items-center">
+      <div className="outline-4 outline-neutral-700 bg-neutral-500 overflow-hidden space-x-5 flex flex-row  rounded-lg items-center">
         <Image
           src={img}
           alt="alt"
