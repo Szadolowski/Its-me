@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-start h-full w-full font-sans bg-zinc-50 dark:bg-neutral-600 p-10 gap-10">
@@ -16,11 +18,13 @@ export default function Home() {
         that fuel my creativity. Let’s build something lasting together.
       </p>
       <div className="w-full flex justify-center pt-5">
-        <input
+        <Link
+          href="About Me"
           type="button"
-          value="explore"
-          className="border-2 rounded-lg px-4 py-2"
-        />
+          className="border-2 rounded-lg px-4 py-2 hover:bg-neutral-500 hover:text-white cursor-pointer hover:scale-105 transition-all active:scale-95"
+        >
+          About Me
+        </Link>
       </div>
     </div>
   );
