@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 // @ts-ignore: side-effect CSS import for global styles (Next.js)
 import "./globals.css";
-import NavInformation from "@/components/NavInformation";
+import NavInformation from "@/components/nav-information";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -42,7 +42,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex flex-row items-center w-full min-h-screen space-between">
+        <div className="flex flex-row items-center w-full min-h-screen space-between bg-black">
           <div className="w-1/5 min-w-64 h-[90vh] mr-10">
             <main className="relative w-full h-full p-4 overflow-hidden text-center bg-neutral-600 rounded-r-2xl">
               <div className="flex items-center justify-center w-full">
@@ -66,8 +66,8 @@ export default function RootLayout({
               </div>
             </main>
           </div>
-          <div className="w-full h-[90vh] flex justify-start items-start rounded-l-2xl overflow-hidden dark:bg-neutral-600">
-            <div className="flex flex-row absolute right-0 border-2 rounded-bl-2xl border-neutral-700 overflow-hidden ">
+          <div className="w-full h-[90vh] flex justify-start items-start rounded-l-2xl overflow-hidden border-t-4 border-neutral-700">
+            <div className="flex flex-row absolute right-0 top-[9] border-2 rounded-tl-2xl border-neutral-700 bg-neutral-600 overflow-hidden h-10">
               {categories.map((category) => {
                 const [key, value] = Object.entries(category)[0];
                 return (
@@ -81,8 +81,8 @@ export default function RootLayout({
                 );
               })}
             </div>
-            <div className="flex flex-col items-center justify-start h-full font-sansbg-neutral-600 p-10 gap-10 w-full overflow-y-auto">
-              <div className="flex flex-col items-start justify-start gap-10 w-3/5">
+            <div className="flex flex-col items-center justify-start h-full font-sans bg-neutral-600 p-10 gap-10 w-full overflow-y-auto">
+              <div className="flex flex-col items-start justify-start gap-10 w-4/5">
                 {children}
               </div>
             </div>
