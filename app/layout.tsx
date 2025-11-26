@@ -38,7 +38,7 @@ export default function RootLayout({
         <div className="fixed w-full border-b-4 rounded-b-lg sm:hidden h-15 bg-neutral-600 border-neutral-700">
           <MobileMenu />
         </div>
-        <div className="flex flex-row items-center w-full min-h-screen pt-16 bg-black sm:pt-0 space-between">
+        <div className="flex flex-row items-center w-full min-h-screen pt-5 bg-black sm:pt-0 space-between">
           <div className="w-1/5 hidden sm:flex min-w-64 h-[90vh] mr-10">
             <main className="relative w-full h-full p-4 overflow-hidden text-center bg-neutral-600 rounded-r-2xl">
               <div className="flex items-center justify-center w-full">
@@ -66,8 +66,8 @@ export default function RootLayout({
             <div className="hidden sm:flex flex-row absolute right-0 top-[15] border-b-0 border-2 rounded-tl-2xl border-neutral-700 bg-neutral-600 overflow-hidden h-8">
               <MenuLinks />
             </div>
-            <div className="flex flex-col items-center justify-start w-full h-full gap-10 p-10 overflow-y-auto font-sans bg-neutral-600">
-              <div className="flex flex-col items-start justify-start w-4/5 gap-10">
+            <div className="flex flex-col items-center justify-start w-full h-full gap-10 px-0 py-5 overflow-y-auto font-sans bg-neutral-600">
+              <div className="flex flex-col items-start justify-start gap-10 px-5">
                 {children}
               </div>
             </div>

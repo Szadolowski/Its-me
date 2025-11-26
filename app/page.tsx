@@ -1,12 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import TypeWriter from "@/components/type-writer";
 
 export default function Home() {
   return (
     <>
       <div className="flex justify-between w-full">
-        <div className="flex flex-col w-full gap-6 text-center sm:w-1/2">
+        <div className="flex flex-col w-full gap-6 text-center lg:w-3/5">
           <h1 className="text-4xl font-black">Get to know me</h1>
           <h3 className="text-2xl font-semibold text-center text-wrap">
             Frontend Developer with a Full Stack mindset
@@ -23,9 +22,8 @@ export default function Home() {
             together.
           </p>
         </div>
-        <div className="relative items-center justify-center hidden w-full sm:flex">
-          <Image src="/screen.svg" alt="alt" fill />
-          <div className="flex justify-start items-start w-[350] h-[240]">
+        <div className="relative items-center justify-center hidden mx-15 lg:flex">
+          <div className="flex justify-start items-start w-[350] h-[240] p-2 border-8 rounded-lg border-black">
             <TypeWriter
               text='<span className="text-green-600">HELLO WORLD!</span>'
               speed={150}
