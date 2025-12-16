@@ -4,8 +4,8 @@ import TypeWriter from "@/components/type-writer";
 export default function Home() {
   return (
     <>
-      <div className="flex justify-between w-full">
-        <div className="flex flex-col w-full gap-6 text-center lg:w-3/5">
+      <div className="flex justify-between w-full p-4">
+        <div className="flex flex-col w-full gap-6 px-6 text-center lg:w-3/5">
           <h1 className="text-4xl font-black">Get to know me</h1>
           <h3 className="text-2xl font-semibold text-center text-wrap">
             Frontend Developer with a Full Stack mindset
