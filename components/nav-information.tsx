@@ -10,15 +10,15 @@ export default function NavInformation({
 }) {
   return (
     <Link href={"https://github.com/Szadolowski"} target="_blank">
-      <div className="flex flex-row items-center space-x-5 overflow-hidden rounded-lg outline-4 outline-neutral-700 bg-neutral-500">
+      <div className="flex flex-row items-center space-x-5 overflow-hidden border border-black rounded-lg bg-custom-secend">
         <Image
           src={img}
           alt="alt"
           width={50}
           height={10}
-          className="p-2 bg-neutral-400"
+          className="p-2 border-r border-black bg-custom-addition"
         />
-        <p className="w-full text-lg font-semibold">{children}</p>
+        <p className="w-full text-lg font-bold text-black">{children}</p>
       </div>
     </Link>
   );

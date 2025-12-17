@@ -38,11 +38,11 @@ export default function RootLayout({
         <div className="fixed w-full border-b-4 rounded-b-lg sm:hidden h-15 bg-neutral-600 border-neutral-700">
           <MobileMenu />
         </div>
-        <div className="flex flex-row items-center w-full min-h-screen pt-5 bg-black sm:pt-0 space-between">
+        <div className="flex flex-row items-center w-full min-h-screen pt-5 bg-custom-main sm:pt-0 space-between">
           <div className="w-1/5 hidden sm:flex min-w-64 h-[90vh] mr-10">
-            <main className="relative w-full h-full p-4 overflow-hidden text-center bg-neutral-600 rounded-r-2xl">
+            <main className="relative w-full h-full p-4 overflow-hidden text-center border-4 border-l-0 border-black rounded-r-2xl">
               <div className="flex items-center justify-center w-full">
-                <div className="relative w-50 h-67.5 bg-linear-to-br from-orange-700 to-orange-400 rounded-xl">
+                <div className="relative w-50 h-67.5 bg-custom-addition rounded-xl">
                   <Image
                     src="/face.png"
                     alt="Its Me Image"
@@ -54,7 +54,7 @@ export default function RootLayout({
               </div>
               <div>
                 <h1 className="text-2xl font-bold">Rafał Curzydło</h1>
-                <h2 className="text-lg font-medium text-orange-300">
+                <h2 className="text-lg font-medium text-custom-addition">
                   FrontEnd Developer
                 </h2>
               </div>
@@ -64,11 +64,11 @@ export default function RootLayout({
               </div>
             </main>
           </div>
-          <div className="flex w-full h-[90vh] justify-start items-start rounded-xl sm:rounded-r-none sm:rounded-l-2xl overflow-hidden border-t-4 border-neutral-700">
-            <div className="hidden sm:flex flex-row absolute right-0 top-[15] border-b-0 border-2 rounded-tl-2xl border-neutral-700 bg-neutral-600 overflow-hidden h-8">
+          <div className="flex w-full h-[90vh] justify-start items-start rounded-xl sm:rounded-r-none sm:rounded-l-2xl overflow-hidden border-4 border-r-0 border-black rounded-r-2xl">
+            <div className="hidden sm:flex flex-row absolute right-0 top-[15] border-b-0 border-2 rounded-tl-2xl border-black bg-custom-main overflow-hidden h-8">
               <MenuLinks />
             </div>
-            <div className="flex flex-col items-center justify-start w-full h-full gap-10 px-0 py-5 overflow-y-auto font-sans bg-neutral-600">
+            <div className="flex flex-col items-center justify-start w-full h-full gap-10 px-1 py-5 overflow-y-auto font-sans">
               <div className="flex flex-col items-start justify-start gap-10 px-5">
                 {children}
               </div>

@@ -1,7 +1,14 @@
 @import "tailwindcss";
 
+@theme {
+  --color-custom-main: #121002;
+  --color-custom-secend: #fffdff;
+  --color-custom-addition: #5fe19b;
+  --color-custom-addition-2: #036a55;
+}
+
 :root {
-  --background: #171717;
+  --background: #121002;
   --foreground: #f1f1f1;
 }
 
