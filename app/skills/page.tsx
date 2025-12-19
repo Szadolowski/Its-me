@@ -162,9 +162,8 @@ export default function SkillsPage() {
         </p>
       </header>
       <div className="grid grid-cols-1 gap-8 mx-auto max-w-7xl lg:grid-cols-3">
-        {/* SECTION 1 - LEWA STRONA (Frontend + Backend/Tools) */}
+        {/* SECTION 1*/}
         <div className="space-y-8 lg:col-span-2">
-          {/* FRONTEND HEADER */}
           <div className="flex items-center gap-4 mb-6">
             <div className="flex-1 h-px bg-white/20"></div>
             <h2 className="font-mono text-xl tracking-widest uppercase text-custom-addition">
@@ -173,7 +172,6 @@ export default function SkillsPage() {
             <div className="flex-1 h-px bg-white/20"></div>
           </div>
 
-          {/* FRONTEND GRID */}
           <p className="mb-4 font-semibold text-white/50">Frontend</p>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 auto-rows-fr">
             {skillsData.frontend.map((skill) => (
@@ -183,7 +181,6 @@ export default function SkillsPage() {
             ))}
           </div>
 
-          {/* BACKEND & CORE HEADER */}
           <div className="flex items-center gap-4 mt-12 mb-6">
             <div className="flex-1 h-px bg-white/20"></div>
             <h2 className="font-mono text-xl tracking-widest uppercase text-custom-addition">
@@ -194,28 +191,22 @@ export default function SkillsPage() {
 
           <p className="mb-4 font-semibold text-white/50">Data & Workflow</p>
 
-          {/* --- TO JEST CZĘŚĆ, KTÓRA BYŁA ŹLE --- */}
-          {/* TERAZ: Wszystko jest w JEDNYM gridzie */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {/* 1. BACKEND (Szeroki - col-span-2) */}
             <SkillCard {...skillsData.backend}>
               {skillsData.backend.icon}
             </SkillCard>
 
-            {/* 2. JĘZYKI (Tablica - mapujemy na dwa kafelki 1x1) */}
             {skillsData.languages.map((lang) => (
               <SkillCard {...lang} key={lang.id}>
                 {lang.icon}
               </SkillCard>
             ))}
 
-            {/* 3. TOOLS (Szeroki - col-span-2) */}
             <SkillCard {...skillsData.tools}>{skillsData.tools.icon}</SkillCard>
           </div>
-          {/* --- KONIEC POPRAWKI --- */}
         </div>
 
-        {/* SECTION 2 - PRAWA STRONA (Infrastructure) */}
+        {/* SECTION 2*/}
         <div className="flex flex-col h-full lg:col-span-1">
           <div className="flex items-center gap-4 mb-6">
             <h2 className="font-mono text-xl tracking-widest text-gray-500 uppercase">
