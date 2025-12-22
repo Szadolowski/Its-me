@@ -74,7 +74,7 @@ export default function ExperienceTimeline() {
             }`}
           >
             {/*DATA*/}
-            <div className="w-full px-4 mb-2 text-left md:w-5/12 md:text-right md:mb-0">
+            <div className="w-full px-4 mb-2 ml-10 text-left lg:ml-0 md:w-5/12 md:text-right md:mb-0">
               <span
                 className={`inline-block px-3 py-1 rounded-full text-xs font-mono font-bold tracking-wider 
                 ${
@@ -88,7 +88,7 @@ export default function ExperienceTimeline() {
             </div>
 
             {/*PUNKT NA LINII*/}
-            <div className="absolute flex items-center justify-center -translate-x-1/2 left-8 md:left-1/2">
+            <div className="absolute flex items-center justify-center -translate-x-1/2 left-4.25 md:left-1/2">
               {item.type === "freelance" ? (
                 // IKONA DLA FREELANCE
                 <div className="w-6 h-6 rounded-full bg-custom main border-2 border-amber-400 shadow-[0_0_15px_rgba(251,191,36,0.5)] z-10 flex items-center justify-center">

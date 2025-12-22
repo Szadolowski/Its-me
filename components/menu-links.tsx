@@ -12,32 +12,39 @@ export default function MenuLinks({ menuStatus }: MenuLinksProps) {
   const pathname = usePathname();
 
   const categories = [
-    { "": "home" },
+    { "": "Home" }, // Zmieniłem małą literę na dużą dla estetyki
     { about_me: "About Me" },
     { skills: "Skills" },
     { projects: "Projects" },
     { contact: "Contact" },
   ];
 
-  return categories.map((category) => {
-    const [key, value] = Object.entries(category)[0];
-    const isActive = pathname === `/${key}` || (pathname === "/" && key === "");
-    let open;
-    if (isActive) {
-      open = "bg-custom-addition-2 font-bold";
-    } else {
-      open =
-        "bg-custom-main text-neutral-300 hover:bg-neutral-700 hover:text-white hover:font-bold";
-    }
-    return (
-      <Link
-        href={`/${key}`}
-        key={key}
-        className={`flex flex-col px-4 py-2 text-2xl font-bold sm:text-base sm:font-normal sm:items-center sm:flex-row sm:border-r-2 ${open} border-black hover:cursor-pointer`}
-        onClick={() => menuStatus?.(false)}
-      >
-        {value}
-      </Link>
-    );
-  });
+  return (
+    <nav className="flex flex-col w-full gap-2 sm:flex-row sm:items-center sm:gap-6">
+      {categories.map((category) => {
+        const [key, value] = Object.entries(category)[0];
+        // Logika dopasowania ścieżki
+        const isActive =
+          pathname === `/${key}` || (pathname === "/" && key === "");
+
+        // Style dla wersji Tech / Cyber
+        const baseStyle =
+          "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200";
+        const activeStyle =
+          "bg-custom-addition/10 text-custom-addition shadow-[0_0_10px_rgba(95,225,155,0.1)]";
+        const inactiveStyle = "text-gray-400 hover:text-white hover:bg-white/5";
+
+        return (
+          <Link
+            href={`/${key}`}
+            key={key}
+            className={`${baseStyle} ${isActive ? activeStyle : inactiveStyle}`}
+            onClick={() => menuStatus?.(false)}
+          >
+            {value}
+          </Link>
+        );
+      })}
+    </nav>
+  );
 }

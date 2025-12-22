@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ExperienceTimeline from "../../components/ExperienceTimeline";
+import ExperienceTimeline from "../../components/experience-timeline";
 import react from "@/public/stack/react.svg";
 import tailwind from "@/public/stack/tailwind.svg";
 import next from "@/public/stack/next.svg";

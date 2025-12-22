@@ -83,16 +83,6 @@ To run the project on your local machine, follow these steps:
 
 4. **Open in browser: The application will be available at http://localhost:3000.**
 
-## 🚧 Project Status
-
-🟢 **Active Development**
-
-The project is currently under continuous improvement. Planned updates include:
-
-- [ ] Expansion of the projects showcase section.
-- [ ] Adding an interactive color palette for the design system.
-- [ ] Further animation optimization.
-
 ## 📬 Contact
 
 If you want to collaborate or just chat about code:

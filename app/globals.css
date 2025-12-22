@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
 @theme {
+  /* Poprawiłem literówkę secend -> second */
   --color-custom-main: #121002;
-  --color-custom-secend: #fffdff;
+  --color-custom-second: #fffdff;
   --color-custom-addition: #5fe19b;
   --color-custom-addition-2: #036a55;
+
+  /* Definicja fontów z Next.js */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 :root {
@@ -12,35 +17,71 @@
   --foreground: #f1f1f1;
 }
 
-@theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* --- 1. GLOBALNY STYL STRONY --- */
 html {
   background-color: var(--background);
   color: var(--foreground);
+  scroll-behavior: smooth; /* Płynne przewijanie do kotwic */
 }
 
+/* --- 2. CUSTOMOWY SCROLLBAR (Kluczowe dla Dark Mode) --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-custom-main);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+  border: 2px solid var(--color-custom-main); /* Margines wokół suwaka */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-custom-addition); /* Zielony po najechaniu */
+}
+
+/* --- 3. KOLOR ZAZNACZANIA TEKSTU --- */
+::selection {
+  background: var(--color-custom-addition);
+  color: #000; /* Czarny tekst na zielonym tle jest czytelniejszy */
+}
+
+/* --- 4. UTILITIES --- */
 @layer utilities {
   .animate-fade-up {
-    animation: fadeUp 0.8s ease-out forwards; /* forwards zatrzymuje element na końcu */
-    opacity: 0; /* Domyślnie niewidoczne */
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; /* Lepsza fizyka (Apple style easing) */
+    opacity: 0;
     transform: translateY(20px);
   }
 
-  /* Opóźnienia */
-  .delay-100 {
+  /* Zmieniłem nazwy na animate-delay, żeby nie psuć zwykłego delay (transition) */
+  .animate-delay-100 {
     animation-delay: 100ms;
   }
-  .delay-200 {
+  .animate-delay-200 {
     animation-delay: 200ms;
   }
-  .delay-300 {
+  .animate-delay-300 {
     animation-delay: 300ms;
   }
-  .delay-500 {
+  .animate-delay-500 {
     animation-delay: 500ms;
+  }
+
+  /* Pomocnicza klasa do ukrywania scrollbara w konkretnych kontenerach */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
   }
 }
 
