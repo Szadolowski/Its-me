@@ -150,8 +150,7 @@ export const metadata = {
 export default function SkillsPage() {
   return (
     <main className="w-full min-h-screen p-4 pb-32 text-white bg-custom-main md:p-10">
-      {/* HEADER */}
-      <header className="mx-auto mb-16 space-y-4 max-w-7xl">
+      <header className="mx-auto mb-16 space-y-4 max-w-7xl animate-fade-up">
         <h1 className="text-4xl font-bold tracking-tight text-white md:text-6xl">
           <span className="text-custom-addition">Technical</span> Arsenal
         </h1>
@@ -162,9 +161,8 @@ export default function SkillsPage() {
         </p>
       </header>
       <div className="grid grid-cols-1 gap-8 mx-auto max-w-7xl lg:grid-cols-3">
-        {/* SECTION 1*/}
         <div className="space-y-8 lg:col-span-2">
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4 mb-6 delay-100 animate-fade-up">
             <div className="flex-1 h-px bg-white/20"></div>
             <h2 className="font-mono text-xl tracking-widest uppercase text-custom-addition">
               The Interface
@@ -172,8 +170,10 @@ export default function SkillsPage() {
             <div className="flex-1 h-px bg-white/20"></div>
           </div>
 
-          <p className="mb-4 font-semibold text-white/50">Frontend</p>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 auto-rows-fr">
+          <p className="mb-4 font-semibold delay-100 text-white/50 animate-fade-up">
+            Frontend
+          </p>
+          <div className="grid grid-cols-1 gap-4 delay-200 md:grid-cols-2 auto-rows-fr animate-fade-up">
             {skillsData.frontend.map((skill) => (
               <SkillCard key={skill.id} {...skill}>
                 {skill.icon}
@@ -181,7 +181,7 @@ export default function SkillsPage() {
             ))}
           </div>
 
-          <div className="flex items-center gap-4 mt-12 mb-6">
+          <div className="flex items-center gap-4 mt-12 mb-6 delay-300 animate-fade-up">
             <div className="flex-1 h-px bg-white/20"></div>
             <h2 className="font-mono text-xl tracking-widest uppercase text-custom-addition">
               Backend & Core
@@ -189,9 +189,11 @@ export default function SkillsPage() {
             <div className="flex-1 h-px bg-white/20"></div>
           </div>
 
-          <p className="mb-4 font-semibold text-white/50">Data & Workflow</p>
+          <p className="mb-4 font-semibold delay-300 text-white/50 animate-fade-up">
+            Data & Workflow
+          </p>
 
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 delay-300 md:grid-cols-2 animate-fade-up">
             <SkillCard {...skillsData.backend}>
               {skillsData.backend.icon}
             </SkillCard>
@@ -206,17 +208,15 @@ export default function SkillsPage() {
           </div>
         </div>
 
-        {/* SECTION 2*/}
         <div className="flex flex-col h-full lg:col-span-1">
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4 mb-6 delay-200 animate-fade-up">
             <h2 className="font-mono text-xl tracking-widest text-gray-500 uppercase">
               The Root (Sudo)
             </h2>
             <div className="flex-1 h-px bg-white/20"></div>
           </div>
 
-          {/* Server Rack Container */}
-          <div>
+          <div className="delay-300 animate-fade-up">
             <div className="flex-1 bg-[#0c0c0c] border border-white/10 rounded-sm p-2 flex flex-col gap-2 shadow-inner shadow-black">
               <div className="bg-[#1a1a1a] px-3 py-2 text-xs font-mono text-wrap text-green-500 border-b border-white/5 mb-2">
                 root@system: ~/infrastructure#

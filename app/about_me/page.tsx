@@ -131,7 +131,7 @@ export default function AboutMePage() {
         </div>
 
         <Link
-          href="/Skills"
+          href="/skills"
           className="inline-block px-8 py-3 mt-4 text-sm font-semibold tracking-wider uppercase transition-all duration-300 border rounded border-custom-addition text-custom-addition hover:bg-custom-addition hover:text-custom-main"
         >
           Explore All Skills
