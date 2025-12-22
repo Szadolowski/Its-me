@@ -3,6 +3,8 @@ import { Geist } from "next/font/google";
 // @ts-ignore: side-effect CSS import for global styles (Next.js)
 import "./globals.css";
 import NavInformation from "@/components/nav-information";
+import { GithubIcon } from "@/components/icons/github-icon";
+import { LinkedinIcon } from "@/components/icons/linkedin-icon";
 
 import Image from "next/image";
 import MobileMenu from "../components/mobile-menu";
@@ -59,8 +61,28 @@ export default function RootLayout({
                 </h2>
               </div>
               <div className="w-[90%] text-left p-5 flex flex-col h-full space-y-5">
-                <NavInformation img={"/github.png"}>GitHub</NavInformation>
-                <NavInformation img={"/linkedin.png"}>LinkedIn</NavInformation>
+                <NavInformation
+                  href="https://github.com/Szadolowski"
+                  svg={
+                    <GithubIcon
+                      className="text-black text-semibold"
+                      size={30}
+                    />
+                  }
+                >
+                  GitHub
+                </NavInformation>
+                <NavInformation
+                  href="https://www.linkedin.com/in/rafalcurzydlo/"
+                  svg={
+                    <LinkedinIcon
+                      className="text-black text-semibold"
+                      size={30}
+                    />
+                  }
+                >
+                  LinkedIn
+                </NavInformation>
               </div>
             </main>
           </div>
