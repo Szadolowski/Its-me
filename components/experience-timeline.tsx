@@ -14,45 +14,119 @@ type TimelineItem = {
 
 const timelineData: TimelineItem[] = [
   {
-    year: "10.2024 - Present",
+    year: "02.2026 - Present",
+    title: "IT Administrator",
+    company: "Giewont HG",
+    description:
+      "Administracja i rozwój infrastruktury IT dla grupy spółek: Windows Server, Active Directory, Linux, Hyper-V i Proxmox, sieci oraz bezpieczeństwo endpointów. Automatyzacja zadań administracyjnych, zarządzanie Microsoft 365 / Entra ID, backupami i systemami biznesowymi. Projekt i pełne wdrożenie produkcyjne strony giewont-chemia.pl w Next.js zgodnie z wymaganiami biznesowymi zarządu.",
+    type: "work",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Linux",
+      "Windows Server",
+      "Active Directory",
+      "Proxmox",
+      "Hyper-V",
+      "MikroTik",
+      "UniFi",
+      "Microsoft 365",
+      "Action1",
+      "ESET PROTECT",
+      "Veeam",
+      "SQL Server",
+    ],
+  },
+
+  {
+    year: "10.2024 - 03.2026",
     title: "IT Specialist",
     company: "Laskopol Sp. z o.o.",
     description:
-      "Front-end development, dashboardy wewnętrzne, administracja infrastrukturą.",
+      "Administracja serwerami, siecią i środowiskiem użytkowników oraz wsparcie systemów ERP. Tworzenie wewnętrznych aplikacji i dashboardów webowych, integracji oraz raportów wykorzystujących dane z systemów biznesowych i baz SQL.",
     type: "work",
-    tech: ["React", "Next.js", "Networking"],
+    tech: [
+      "Windows Server",
+      "Linux",
+      "Active Directory",
+      "SQL",
+      "Microsoft SQL Server",
+      "React",
+      "Next.js",
+      "JavaScript",
+      "Networking",
+      "Comarch Optima",
+    ],
   },
+
   {
     year: "09.2024 - Present",
     title: "Bachelor's in Computer Science",
     company: "Akademia Nauk Stosowanych, Nowy Sącz",
     description:
-      "Studia inżynierskie w toku. Pogłębianie wiedzy z zakresu inżynierii oprogramowania.", // [cite: 63-65]
+      "Studia inżynierskie na kierunku Informatyka. Rozwijanie wiedzy z zakresu programowania, baz danych, systemów operacyjnych, sieci komputerowych oraz projektowania i tworzenia oprogramowania.",
     type: "education",
+    tech: [
+      "Software Engineering",
+      "Databases",
+      "Networking",
+      "Operating Systems",
+      "Programming",
+    ],
   },
+
   {
-    year: "07.2024", // Poprawiony rok zgodnie z ustaleniami
+    year: "07.2025",
     title: "Freelance IT Project",
     company: "Betside.pl",
-    description: "Pełna migracja platformy i rekonfiguracja serwisów.",
+    description:
+      "Kompleksowa migracja platformy internetowej i usług na nową infrastrukturę serwerową, rekonfiguracja środowiska oraz optymalizacja działania usług po migracji.",
     type: "freelance",
-    tech: ["Migration", "Linux"],
+    tech: [
+      "Linux",
+      "Server Migration",
+      "Web Hosting",
+      "DNS",
+      "Networking",
+      "Troubleshooting",
+    ],
   },
+
   {
     year: "05.2024 - 10.2024",
-    title: "Office Intern",
+    title: "IT Intern",
     company: "GM PROJEKT",
-    description: "Budowa aplikacji w ReactJS, Next.js i TailwindCSS.",
-    type: "work",
-    tech: ["React", "TailwindCSS"],
-  },
-  {
-    year: "2019 - 2024",
-    title: "Technik Informatyk",
-    company: "ZSTiO Limanowa",
     description:
-      "Edukacja średnia zakończona tytułem technika. Specjalizacja: Technologie Informatyczne.", // [cite: 66-67]
+      "Rozwój interfejsów i aplikacji webowych oraz wsparcie techniczne środowiska IT. Praca z React.js, Tailwind CSS i JavaScript, analiza danych oraz diagnozowanie problemów sprzętowych i sieciowych.",
+    type: "work",
+    tech: [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Redux",
+      "SQL",
+      "Networking",
+    ],
+  },
+
+  {
+    year: "09.2019 - 05.2024",
+    title: "IT Technician",
+    company: "ZSTiO im. Jana Pawła II, Limanowa",
+    description:
+      "Technikum informatyczne zakończone uzyskaniem tytułu Technik Informatyk oraz kwalifikacji INF.02 i INF.03. Nauka administracji systemami, sieci komputerowych, baz danych, programowania i tworzenia aplikacji webowych.",
     type: "education",
+    tech: [
+      "INF.02",
+      "INF.03",
+      "Cisco",
+      "Networking",
+      "Windows",
+      "Linux",
+      "Databases",
+      "Web Development",
+    ],
   },
 ];
 
